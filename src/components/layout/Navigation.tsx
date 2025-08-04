@@ -127,7 +127,7 @@ export function Navigation() {
                   'block px-3 py-2 text-base font-medium rounded-md transition-colors',
                   location.pathname === item.href
                     ? 'text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20'
-                    : 'text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800'
+                    : 'text-gray-700 dark:text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-50 dark:hover:bg-gray-800'
                 )}
                 onClick={() => setIsOpen(false)}
               >

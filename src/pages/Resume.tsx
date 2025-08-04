@@ -301,7 +301,7 @@ export function Resume() {
                       <div className="flex items-start gap-3">
                         <Award className="w-6 h-6 text-blue-600 dark:text-blue-400 print:text-gray-600 flex-shrink-0 mt-1" />
                         <div className="flex-1">
-                          <h3 className="font-semibold text-gray-900 dark:text-white print:text-black mb-1">
+                          <h3 className="font-semibold text-gray-900 dark:text-gray-500 print:text-black mb-1">
                             {cert.name}
                           </h3>
                           <p className="text-blue-600 dark:text-blue-400 print:text-gray-700 text-sm font-medium mb-2">

@@ -1,0 +1,183 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import "tailwindcss";
+
+/* Base styles */
+body {
+  font-family: 'Inter', ui-sans-serif, system-ui;
+  font-feature-settings: "rlig" 1, "calt" 1;
+  background-color: #ffffff;  /* White background for maximum visibility */
+  color: #1a202c;  /* Darker text color for stronger contrast */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark body {
+  background-color: #111827;
+  color: #f9fafb;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Glass effects */
+.glass {
+  backdrop-filter: blur(12px);
+  background: rgba(240, 240, 240, 0.95);  /* More opaque and slightly darker for text visibility */
+  border: 1px solid rgba(230, 230, 230, 1);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);  /* Stronger shadow for better visibility */
+}
+
+.dark .glass {
+  background: rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.glass-strong {
+  backdrop-filter: blur(24px);
+  background: rgba(230, 230, 230, 0.98);  /* Even darker background for maximum contrast */
+  border: 1px solid rgba(210, 210, 210, 1);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);  /* Stronger shadow for better visibility */
+}
+
+.dark .glass-strong {
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Neumorphism effects */
+.neumorphism {
+  background: #dee2e8;  /* Darker background for much better contrast */
+  box-shadow: 
+    8px 8px 16px rgba(157, 167, 182, 0.8),  /* Darker shadow for better visibility */
+    -8px -8px 16px rgba(255, 255, 255, 0.8);  /* Brighter highlight */
+}
+
+.dark .neumorphism,
+.neumorphism-dark {
+  background: #1f2937;
+  box-shadow: 
+    8px 8px 16px rgba(0, 0, 0, 0.6),
+    -8px -8px 16px rgba(255, 255, 255, 0.05);
+}
+
+/* Gradient effects */
+.gradient-text {
+  background: linear-gradient(to right, #1e40af, #7e22ce, #1e3a8a);  /* Darker gradient colors */
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.1);  /* Subtle shadow for better visibility */
+}
+
+.gradient-bg {
+  background: linear-gradient(135deg, #b1c0d3, #d1dae6, #93b4f3);  /* Even higher contrast between gradient colors */
+  box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5);  /* Inner glow for definition */
+}
+
+.dark .gradient-bg {
+  background: linear-gradient(135deg, #111827, #1f2937, #111827);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #d1d5db;  /* Darker track color for better visibility */
+}
+
+.dark ::-webkit-scrollbar-track {
+  background: #374151;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #9ca3af;
+  border-radius: 9999px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #6b7280;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #6b7280;
+}
+
+.dark ::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Selection styles */
+::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: #1e3a8a;
+}
+
+.dark ::selection {
+  background: rgba(59, 130, 246, 0.3);
+  color: #dbeafe;
+}
+
+/* Focus styles */
+.focus-ring {
+  outline: none;
+}
+
+.focus-ring:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Print styles */
+@media print {
+  .print\:hidden {
+    display: none !important;
+  }
+  .print\:text-black {
+    color: black !important;
+  }
+  .print\:bg-white {
+    background-color: white !important;
+  }
+  .print\:shadow-none {
+    box-shadow: none !important;
+  }
+  .print\:border {
+    border: 1px solid #d1d5db !important;
+  }
+  .print\:border-gray-300 {
+    border-color: #d1d5db !important;
+  }
+  .print\:bg-gray-100 {
+    background-color: #f3f4f6 !important;
+  }
+  .print\:text-gray-700 {
+    color: #374151 !important;
+  }
+  .print\:text-gray-600 {
+    color: #4b5563 !important;
+  }
+  .print\:border-gray-400 {
+    border-color: #9ca3af !important;
+  }
+  .print\:bg-gray-600 {
+    background-color: #4b5563 !important;
+  }
+  .print\:bg-gray-400 {
+    background-color: #9ca3af !important;
+  }
+  .print\:bg-gray-200 {
+    background-color: #e5e7eb !important;
+  }
+  .print\:ring-gray-300 {
+    --tw-ring-color: #d1d5db !important;
+  }
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  .gradient-bg {
+    background: white !important;
+  }
+}
